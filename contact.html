@@ -3,7 +3,33 @@
 <head>
 	<meta charset="utf-8">
 	<title>contact</title>
+	<link charset="utf-8" rel="stylesheet" type="text/css" href="smoke-pure.css" />
+    <script type="text/javascript" src="smoke-pure.js"></script>
+
+  
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function validateEmail(email){
+		var email = document.getElementById('mail').value; 
+		var re = /\S+@\S+\.\S+/;
+        if( re.test(email)){
+        document.getElementById('msg').innerHTML = "ok";
+        }else{
+        document.getElementById('msg').innerHTML = "put valid e-mail";
+         }
+
+        }
+        
+		function formCheck(){
+			var a = document.getElementById('text').value;
+			var b = document.getElementById('mail').value;
+			if( a == "" || b == ""){
+				
+            smoke.alert("please fill in all fields ");
+				return false;
+			}
+		}
+	</script>
 </head>
 <body>
 	<div id="wrapper"></div>
@@ -11,17 +37,24 @@
 	<div id="nav"></div>
 	<ul class="nav">
 	        <li><a href="my web.html" title="main" style="color:#000000; text-decoration: none">MAIN</a>
-	</li>
-        <li><a href="gallery.html" title="gallery" style="color: #000000; text-decoration:none">GALLERY</a>
-    </li>
-    <li><a href="contact.html" title="contact" style="color: #000000; text-decoration:none">CONTACT</a>
-    	</li>
-    <li><a href="about.html" title="about" style="color:#000000; text-decoration: none"> ABOUT</a>
-    </li>	
-</ul>
+	        </li>
+	        <li><a href="about.html" title="about" style="color:#000000; text-decoration: none"> ABOUT</a>
+             </li>
+            
+             <li><a href="contact.html" title="contact" style="color: #000000; text-decoration:none">CONTACT</a>
+    	     </li>
+             <li><a href="gallery.html" title="gallery" style="color: #000000; text-decoration:none">GALLERY</a>
+             </li>	
+    </ul>
 	<div class="contact">
-		<p>tel:+<br>
-		e-mail:@hotmail.com</p>
+		
+		<p><form action="https://formspree.io/e-ve-j@hotmail.com" method="POST"> Message me :<br>
+        <p><textarea id = "text"  class="textarea" name="comment"></textarea><p>
+         <p>Your e-mail<br>
+        <input onblur = " validateEmail() " id = "mail" type="email" name="_replyto">
+        <span id="msg"></span></p>
+        <input onclick = "return formCheck()" type="submit" value="Send">
+        </form></p>
 		
 		
 	</div>

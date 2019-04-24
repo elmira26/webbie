@@ -14,6 +14,7 @@ body {
       margin: -10px;
       text-align: center;
       background: white;
+     
 
       
  }
@@ -50,9 +51,10 @@ body {
 -o-transition:all 1s linear;
 }
 .nav li a:hover{
-  background-color:#fefaf2;
- color:#fefaf2;
- width:200px;
+background-color:#fffcf6;
+ height: 17px; 
+ width:170px;
+ 
 }
 
 .info {
@@ -78,20 +80,58 @@ body {
 
    }
 
-  body.changefon{
-    background-color: #f00;
+  #changefon{
+    background-color: 
   }
 
    .contact {
     float: right;
+    padding-left: 20px;
     margin-right: 150px;
-    margin-top: 330px;
-    height: 300px;
+    margin-top: 100px;
+    height: 400px;
+    width: 400px;
     font-size: 1.1em;
     letter-spacing: 3px;
     font-style: geneva;
     font-weight: lighter;
-   }
+    border-radius: 10px;
+
+    }
+    .textarea{
+      width: 300px;
+      height: 150px;
+      padding: 10px;
+      background-color: #fefdfe ;
+      border-color: #dacdd0;
+
+    }
+    form{
+      box-sizing: border-box;
+      width: 300px;
+     }
+     a {
+  text-decoration: none;
+}
+
+.alert {
+  background: #eee;
+  padding: 40px;  
+  position: relative;
+  font-weight: 600;
+}
+
+.close_btn {
+  color: #000;
+  padding: 15px 0px 5px 10px;
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;  
+}
+
+
+    
 
 
    
