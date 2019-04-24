@@ -9,7 +9,7 @@
   
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript">
-		function validateEmail(email){
+		function validateEmail(){
 		var email = document.getElementById('mail').value; 
 		var re = /\S+@\S+\.\S+/;
         if( re.test(email)){
@@ -48,13 +48,13 @@
     </ul>
 	<div class="contact">
 		
-		<p><form action="https://formspree.io/e-ve-j@hotmail.com" method="POST"> Message me :<br>
-        <p><textarea id = "text"  class="textarea" name="comment"></textarea><p>
-         <p>Your e-mail<br>
-        <input onblur = " validateEmail() " id = "mail" type="email" name="_replyto">
-        <span id="msg"></span></p>
+		<form action="https://formspree.io/e-ve-j@hotmail.com" method="POST"> Message me :<br>
+        <textarea id = "text"  class="textarea" name="comment"></textarea><br>
+        Your e-mail<br>
+        <input onblur = " validateEmail() " id = "mail" type="email" name="email">
+        <span id="msg"></span>
         <input onclick = "return formCheck()" type="submit" value="Send">
-        </form></p>
+        </form>
 		
 		
 	</div>
