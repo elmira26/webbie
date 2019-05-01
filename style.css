@@ -1,9 +1,9 @@
 body {
-		  background: url(20.jpg) fixed no-repeat; 
-      background-size: 100% auto;
+		  background: url(21a.jpg) fixed no-repeat; 
+     background-size: 100% auto;
       position: absolute;
-      width:100%;
-      height:100%;
+      max-width:100%;
+      height:auto;
       background-color: #a49198;
       }
 
@@ -22,10 +22,9 @@ nav{
       margin: -25px;
       text-align: center;
       background: white;
-
-
       
- }
+
+    }
 nav li{
     display: inline-block;
     padding-top: 12px;
@@ -49,14 +48,14 @@ nav li a {
        text-decoration: none;
        font-style: verdana;  
        position: relative;
-       background-color: #ffffff;
+       
        color: black;
        font-size: 0.9em;
        padding-bottom: 10px;
        letter-spacing: 8px;
        margin: 0 35px 0 35px;
        cursor: pointer;
-       width: 100%;
+     
        transition: all 2s linear;
 -moz-transition:all 2s linear;
 -webkit-transition:all 2s linear;
@@ -104,7 +103,8 @@ nav li a:hover{
     font-weight: lighter;
     border-radius: 10px;
  }
-  @media only screen and (min-width:760px) and (max-width:1400px){
+
+  @media only screen and (min-width:1401px) and (max-width:1700px){
     .container{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -124,16 +124,58 @@ nav li a:hover{
     '. . . . . . aside aside aside';
    }
    aside{
-    grid-column: 8/9;
-    grid-row: 1/3;
+    grid-column: 7/9;
+    grid-row: 2/4;
     align-self: start;
     justify-self: start;
    }
    nav ul{
+    background-color: #ffffff;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
     'liM liA liC liG';
+  }
+  body{
+    width: 150%;
+  }
+}
+  @media only screen and (min-width:760px) and (max-width:1400px){
+    .container{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(170px,auto);
+    grid-gap: 10px;
+    padding-left: 10px;
+    padding-top: 50px;
+    margin-right: 10%;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    font-style: geneva;
+    font-weight: lighter;
+    border-radius: 10px;
+    align-items: center;
+    
+    grid-template-areas: 
+    '. . . . . . aside aside aside'
+    '. . . . . . aside aside aside'
+    '. . . . . . aside aside aside';
+   }
+   aside{
+    grid-column: 8/9;
+    grid-row: 1/3;
+    /*align-self: start;
+    justify-self: start;*/
+   }
+   nav ul{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'liM liA liC liG';
+  }
+  body{
+    width:110%;
   }
 }
 @media only screen and (min-width: 563px) and (max-width: 760px){
@@ -160,6 +202,7 @@ nav li a:hover{
     justify-self: start;
    }
    ul{
+    background-color: #ffffff;
     padding: 0px;
     margin-top: 0px;
     display: grid;
@@ -170,6 +213,9 @@ nav li a:hover{
    }
    nav{
     margin:-10px;
+   }
+   body{
+    width:110%;
    }
  }
  @media only screen and (min-width: 460px) and (max-width: 562px){
@@ -188,22 +234,37 @@ nav li a:hover{
     border-radius: 10px;
    }
   ul{
-    float:right;
-    padding: 10px;
-    margin-top: 10px;
+    padding-bottom: 13%;
+    padding-top: 10%;
+    margin-right: 0px;
+    font-size: 1.5em;
+    margin-top: -10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    justify-self:start;
     grid-template-areas: 
+    /*'liM liM liM liM'
+    'liA liA liA liA'
+    'liC liC liC liC' 
+    'liG liG liG liG';*/
+    '. . . . ' 
     '. . liM liM'
     '. . liA liA'
     '. . liC liC' 
     '. . liG liG';
    }
+
+   header{
+    background-color: #f9f9ef;
+    opacity: .7;
+  }
    form{
     display: grid;
     width:100%;
-    padding: 15px;
+    padding: 7px;
     margin-left: -15px;
+   
     border:1px solid #dacdd0;
     border-radius: 10px;
     grid-template-columns: repeat(8, 1fr);
@@ -220,6 +281,10 @@ nav li a:hover{
 
   nav{
     background-color: #a49198;
+    width:105%;
+  }
+  body{
+    width: 120%;
   }
 }
 
@@ -261,7 +326,7 @@ nav li a:hover{
     width:100%;
     padding: -10px;
     margin-left: -10px;
-    margin-top: -20%; 
+    margin-top: 25%; 
     border:1px solid #dacdd0;
     border-radius: 10px;
     grid-template-columns: repeat(6, 1fr);
@@ -276,12 +341,12 @@ nav li a:hover{
 }
   body {
   margin-top: 0;
-
+  width: 120%;
   }
   
   header{
     background-color: #f9f9ef;
-    opacity: .5;
+    opacity: .7;
   }
 }
 
