@@ -142,6 +142,10 @@ nav li a:hover{
   body{
     width: 150%;
   }
+  form{
+    font-size: 0.7em;
+    letter-spacing: 3px;
+  }
 }
   @media only screen and (min-width:760px) and (max-width:1400px){
     .container{
@@ -165,11 +169,11 @@ nav li a:hover{
     '. . . . . . aside aside aside';
    }
    aside{
-    grid-column: 8/10;
+    grid-column: 7/9;
     grid-row: 1/3;
     width:100%;
     background-color: ;
-  
+   
     /*align-self: start;
     justify-self: start;*/
    }
@@ -182,6 +186,20 @@ nav li a:hover{
   }
   body{
     width:110%;
+    background-size: contain;
+    background-color:  #b28ea8;
+  }
+  form{
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    border:1px solid #dacdd0;
+    border-radius: 10px;
+    background-color: white;
+    opacity: .5;
+    width: 110%;
+    padding: 20%;
+    margin-left: 15%;
+
   }
 }
 @media only screen and (min-width: 563px) and (max-width: 760px){
@@ -197,14 +215,15 @@ nav li a:hover{
     letter-spacing: 3px;
     font-style: geneva;
     font-weight: lighter;
-    grid-template-areas: 
+    grid-template-areas:
+     
     '. . . . . . aside aside aside'
     '. . . . . . aside aside aside';
   }
    aside{
     width:100%;
     grid-column: 7/9;
-    grid-row: 1/3;
+    grid-row: 3/5;
     align-self: start;
     justify-self: start;
    }
@@ -223,6 +242,20 @@ nav li a:hover{
    }
    body{
     width:110%;
+    background-size: cover;
+    background-color: #7194a6;
+    opacity: .8;
+   }
+   form{
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    width: 110%;
+    padding: 20%;
+    border:1px solid #dacdd0;
+    border-radius: 10px;
+    background-color: #f9f9ef;
+    opacity: .4;
+    margin-right: -10%;
    }
  }
  @media only screen and (min-width: 460px) and (max-width: 562px){
@@ -268,6 +301,8 @@ nav li a:hover{
   }
    form{
     display: grid;
+    font-size: 0.75em;
+    letter-spacing: 2px
     width:100%;
     padding: 7px;
     margin-left: -15px;
@@ -339,11 +374,12 @@ nav li a:hover{
     margin-top: -10%; 
     border:1px solid #dacdd0;
     border-radius: 10px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(auto, auto);
     grid-template-areas: 
-    '. message message message'
-    '. message message message'
+    '. message message .'
+    '. message message .'
+    '. message message .'
     '. mail mail mail'
     '. mail mail mail';
      
@@ -359,7 +395,8 @@ nav li a:hover{
     opacity: .7;
   }
   .secOne{
-    grid-column: 2/5;
+    grid-column: 2/4;
+    grid-row: 2/4
     }
   .secTwo{
     grid-column: 2/5;
