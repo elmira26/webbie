@@ -1,16 +1,20 @@
 body {
-		background: url(20.jpg)  fixed no-repeat; 
-        background-size: 100% auto;
-        padding: 0px;
-        
-	    }
+		  background: url(20.jpg) fixed no-repeat; 
+      background-size: 100% auto;
+      position: absolute;
+      background-color: #f9f9ef;
+      }
 
-        
- .nav{
+header{
+width: 100%;
+background-color: white;
+} 
+
+nav{
 
       list-style: none;
-      padding-top:20px 0 5px;
-      padding: 30px 0 5px;
+      /*padding-top:20px 0 5px;*/
+      padding: 15px 0 0px;
       margin: -10px;
       text-align: center;
       background: white;
@@ -18,11 +22,11 @@ body {
 
       
  }
-  .nav li{
+  nav li{
     display: inline-block;
 
    }
-  .nav li: after{
+nav li: after{
     content: "|";
     color: #606060;
     display: inline-block;
@@ -30,10 +34,11 @@ body {
 
   }
 
-  .nav li: last-child: after{
+nav li: last-child: after{
     content: none;
   }     
-    .nav li a {
+    
+nav li a {
        display: inline-block;
        text-decoration: none;
        font-style: verdana;  
@@ -43,18 +48,19 @@ body {
        font-size: 0.9em;
        padding-bottom: 10px;
        letter-spacing: 8px;
-       margin: 0 34px 0 30px;
+       margin: 0 30px 0 30px;
        cursor: pointer;
-       transition: all 1s linear;
--moz-transition:all 1s linear;
--webkit-transition:all 1s linear;
--o-transition:all 1s linear;
+       width: 100%;
+       transition: all 2s linear;
+-moz-transition:all 2s linear;
+-webkit-transition:all 2s linear;
+-o-transition:all 2s linear;
 }
-.nav li a:hover{
-background-color:#fffcf6;
+
+nav li a:hover{
+ background-color:#fffcf6;
  height: 17px; 
- width:170px;
- 
+ width: 20px;
 }
 
 .info {
@@ -77,51 +83,254 @@ background-color:#fffcf6;
     letter-spacing: 3px;
     font-weight: lighter;
     
-
    }
 
-  #changefon{
-    background-color: 
-  }
-
-   .contact {
-    float: right;
+ .content {
+   
     padding-left: 20px;
-    margin-right: 150px;
-    margin-top: 100px;
-    height: 400px;
-    width: 400px;
+    margin-right: 10%;
+    margin-top: 10%;
+    height: 20%;
+    width: 30%;
     font-size: 1.1em;
     letter-spacing: 3px;
     font-style: geneva;
     font-weight: lighter;
     border-radius: 10px;
-
-    }
-    .textarea{
-    width: 300px;
-    height: 150px;
+ }
+  @media only screen and (min-width:760px) and (max-width:1200px){
+    .container{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(170px,auto);
+    grid-gap: 10px;
+    padding-left: 10px;
+    padding-top: 50px;
+    margin-right: 10%;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    font-style: geneva;
+    font-weight: lighter;
+    border-radius: 10px;
+    grid-template-areas: 
+    '. . . . . . aside aside aside'
+    '. . . . . . aside aside aside'
+    '. . . . . . aside aside aside';
+   }
+   aside{
+    grid-column: 8/9;
+    grid-row: 1/3;
+    align-self: start;
+    justify-self: start;
+   }
+   nav ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'liM liA liC liG';
+  }
+}
+@media only screen and (min-width: 560px) and (max-width: 760px){
+    .container{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(200px,auto);
+    grid-gap: 0px;
+    padding-left: 10px;
+    padding-top: 20px;
+    margin-top: 0px;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    font-style: geneva;
+    font-weight: lighter;
+    grid-template-areas: 
+    '. . . . . . aside aside aside'
+    '. . . . . . aside aside aside';
+  }
+   aside{
+    grid-column: 7/9;
+    grid-row: 1/3;
+    align-self: start;
+    justify-self: start;
+   }
+   ul{
+    padding: 0px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'liM liM liA liA'
+    'liC liC liG liG';
+   }
+ }
+ @media only screen and (min-width: 460px) and (max-width: 560px){
+    .container{
+    /*display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(200px,auto);*/
+    grid-gap: 0px;
+    padding-left: 10px;
+    padding-top: 70px;
+    margin-top: 50px;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    font-style: geneva;
+    font-weight: lighter;
+    border-radius: 10px;
+   }
+  ul{
+    float:right;
     padding: 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    '. . liM liM'
+    '. . liA liA'
+    '. . liC liC' 
+    '. . liG liG';
+   }
+   form{
+    display: grid;
+    width:100%;
+    padding: 15px;
+    margin-left: -15px;
+    border:1px solid #dacdd0;
+    border-radius: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+    grid-template-areas: 
+
+    'message  message message . . mail mail .'
+    'message  message message . . mail mail .';
+   }
+
+  aside{
+    margin-top: 50%;
+  }
+
+  nav{
+    background-color: #f9f9ef;
+  }
+}
+
+@media only screen and (min-width: 160px) and (max-width: 459px){
+    .container{
+    /*display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(200px,auto);*/
+    grid-gap: 0px;
+    padding-left: 10px;
+    padding-top: 70px;
+    margin-top: 50px;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    font-style: geneva;
+    font-weight: lighter;
+    border-radius: 10px;
+   }
+
+ ul{
+   padding-bottom: 38%;
+    margin-right: 0px;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    justify-self:start;
+    grid-template-areas: 
+    'liM liM liM liM'
+    'liA liA liA liA'
+    'liC liC liC liC' 
+    'liG liG liG liG';
+   }
+
+   form{
+    display: grid;
+    width:100%;
+    padding: 30px;
+    margin-left: -10px;
+    margin-top: -20%; 
+    border:1px solid #dacdd0;
+    border-radius: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+    grid-template-areas: 
+    'message message message'
+    'message message message'
+    'mail mail mail'
+    'mail mail mail';
+     
+
+}
+  body {
+  margin-top: 0;
+
+  }
+  
+  header{
+    background-color: #f9f9ef;
+    opacity: .5;
+  }
+}
+
+   
+  .liM{
+    grid-area: liM;
+    align-self: center;
+   }
+  .liA{
+    grid-area: liA;
+    align-self: center;
+    justify: start;
+   }
+  .liC{
+    grid-area: liC;
+    align-self: center;
+   }
+  .liG{
+    grid-area: liG;
+    align-self: center;
+   }
+  .secOne{
+    grid-area: message;
+   
+    
+   }
+  .secTwo{
+    grid-area: mail; 
+   }
+ 
+  .textarea{
+    width: 80%;
+    height: auto;
+    
+    /*grid-column: ;
+    grid-auto-columns: minmax(100px, auto);
+    grid-auto-rows: minmax(100px,auto);*/
+
+    padding: 20px;
     background-color: #fefdfe ;
     border-color: #dacdd0;
 
     }
-    form{
-    box-sizing: border-box;
-    width: 300px;
-     }
-     a {
-  text-decoration: none;
-}
-.btn{
-   font-size: 1.1em;
-   font-family: geneva;
-   font-weight: bolder;
-   text-align: center;
-   width:80px;
-}
 
-.alert {
+    
+     a {
+    text-decoration: none;
+    }
+  .btn{
+   font-size: .9em;
+   color: grey;
+   font-family: verdana;
+   letter-spacing: 2px;
+   width:100px;
+   height: 25px;
+   border:1px solid #dacdd0;
+   padding-top: 0px;
+   }
+
+  .alert {
   background: #eee;
   padding: 40px;  
   position: relative;
@@ -135,6 +344,10 @@ background-color:#fffcf6;
   position: absolute;
   top: 40px;
   right: 40px;  
+}
+button{
+  background-color: white;
+  
 }
 
 

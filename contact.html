@@ -2,7 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	
 	<title>contact</title>
+	
 	<link charset="utf-8" rel="stylesheet" type="text/css" href="smoke-pure.css" />
     <script type="text/javascript" src="smoke-pure.js"></script>
 
@@ -32,33 +34,46 @@
 	</script>
 </head>
 <body>
-	<div id="wrapper"></div>
-	<div id="header"></div>
-	<div id="nav"></div>
-	<ul class="nav">
-	        <li><a href="my web.html" title="main" style="color:#000000; text-decoration: none">MAIN</a>
+	
+	<header>
+	<nav >
+	
+    <div id="nav">
+    	<ul  >
+	       <li class="liM"><a href="my web.html" title="main" ">MAIN
+	        </a>
 	        </li>
-	        <li><a href="about.html" title="about" style="color:#000000; text-decoration: none"> ABOUT</a>
-             </li>
+	        <li class="liA"><a href="about.html" title="about" > ABOUT
+	        </a>
+            </li>
             
-             <li><a href="contact.html" title="contact" style="color: #000000; text-decoration:none">CONTACT</a>
+            <li class="liC"><a href="contact.html" title="contact" >CONTACT
+	       	 </a>
     	     </li>
-             <li><a href="gallery.html" title="gallery" style="color: #000000; text-decoration:none">GALLERY</a>
+             <li class="liG"><a href="gallery.html" title="gallery" >GALLERY
+	         </a>
              </li>	
     </ul>
-	<div class="contact">
-		
-		<form action="https://formspree.io/e-ve-j@hotmail.com" method="POST"> Message me :<br><br>
+    </div>
+    </nav>
+    </header>
+        <div class="container">
+        <aside>
+        <form action="https://formspree.io/e-ve-j@hotmail.com" method="POST">
+        <section class="secOne">
+         Message me:<br><br>
         <textarea id = "text"  class="textarea" name="comment"></textarea><br><br>
+        </section>
+        <section class="secTwo">
         Your e-mail<br><br>
         <input onblur = " validateEmail() " id = "mail" type="email" name="email">
         <span id="msg"></span><br><br>
-        <input class="btn" onclick = "return formCheck()" type="submit" value="S&#160e&#160n&#160d">
+        <button class="btn" onclick = "return formCheck()" type="submit"value="Send">Send</button>
+        </section>
         </form>
-		
+		</aside>
 		
 	</div>
-		
-	<div id="footer"></div>
+   
 </body>
 </html>
