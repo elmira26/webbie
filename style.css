@@ -2,7 +2,9 @@ body {
 		  background: url(20.jpg) fixed no-repeat; 
       background-size: 100% auto;
       position: absolute;
-      background-color: #f9f9ef;
+      width:100%;
+      height:100%;
+      background-color: #a49198;
       }
 
 header{
@@ -11,19 +13,22 @@ background-color: white;
 } 
 
 nav{
-
+      width: 100%;
+      height: 10%;
       list-style: none;
       /*padding-top:20px 0 5px;*/
-      padding: 15px 0 0px;
-      margin: -10px;
+      padding: 0px 0 0px;
+      position:relative;
+      margin: -23px;
       text-align: center;
       background: white;
 
 
       
  }
-  nav li{
+nav li{
     display: inline-block;
+    padding-top: 12px;
 
    }
 nav li: after{
@@ -31,6 +36,7 @@ nav li: after{
     color: #606060;
     display: inline-block;
     vertical-align: top;
+
 
   }
 
@@ -48,7 +54,7 @@ nav li a {
        font-size: 0.9em;
        padding-bottom: 10px;
        letter-spacing: 8px;
-       margin: 0 30px 0 30px;
+       margin: 0 35px 0 35px;
        cursor: pointer;
        width: 100%;
        transition: all 2s linear;
@@ -130,7 +136,7 @@ nav li a:hover{
     'liM liA liC liG';
   }
 }
-@media only screen and (min-width: 560px) and (max-width: 760px){
+@media only screen and (min-width: 563px) and (max-width: 760px){
     .container{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -162,8 +168,11 @@ nav li a:hover{
     'liM liM liA liA'
     'liC liC liG liG';
    }
+   nav{
+    margin:-10px;
+   }
  }
- @media only screen and (min-width: 460px) and (max-width: 560px){
+ @media only screen and (min-width: 460px) and (max-width: 562px){
     .container{
     /*display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -210,7 +219,7 @@ nav li a:hover{
   }
 
   nav{
-    background-color: #f9f9ef;
+    background-color: #a49198;
   }
 }
 
@@ -231,9 +240,11 @@ nav li a:hover{
    }
 
  ul{
-   padding-bottom: 38%;
+    padding-bottom: 13%;
+    padding-top: 12%;
     margin-right: 0px;
-    width: 50%;
+    font-size: 1.5em;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-self: center;
@@ -248,7 +259,7 @@ nav li a:hover{
    form{
     display: grid;
     width:100%;
-    padding: 30px;
+    padding: -10px;
     margin-left: -10px;
     margin-top: -20%; 
     border:1px solid #dacdd0;
@@ -347,7 +358,7 @@ nav li a:hover{
 }
 button{
   background-color: white;
-  
+
 }
 
 
