@@ -124,6 +124,9 @@ nav li a:hover{
     '. . . . . . aside aside aside';
    }
    aside{
+    width: 100%;
+    
+    height: auto;
     grid-column: 7/9;
     grid-row: 2/4;
     align-self: start;
@@ -162,8 +165,11 @@ nav li a:hover{
     '. . . . . . aside aside aside';
    }
    aside{
-    grid-column: 8/9;
+    grid-column: 8/10;
     grid-row: 1/3;
+    width:100%;
+    background-color: ;
+  
     /*align-self: start;
     justify-self: start;*/
    }
@@ -196,13 +202,14 @@ nav li a:hover{
     '. . . . . . aside aside aside';
   }
    aside{
+    width:100%;
     grid-column: 7/9;
     grid-row: 1/3;
     align-self: start;
     justify-self: start;
    }
    ul{
-    background-color: #ffffff;
+    background-color: 
     padding: 0px;
     margin-top: 0px;
     display: grid;
@@ -264,7 +271,8 @@ nav li a:hover{
     width:100%;
     padding: 7px;
     margin-left: -15px;
-   
+    background-color:  #a49198;
+    opacity: .7;
     border:1px solid #dacdd0;
     border-radius: 10px;
     grid-template-columns: repeat(8, 1fr);
@@ -322,21 +330,22 @@ nav li a:hover{
    }
 
    form{
-
+    background-color: #d1c7ca;
+    opacity: .7;
     display: grid;
     width:100%;
     padding: 10px;
     margin-left: -10px;
-    margin-top: 25%; 
+    margin-top: -10%; 
     border:1px solid #dacdd0;
     border-radius: 10px;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(auto, auto);
     grid-template-areas: 
-    '. message message'
-    '. message message'
-    '. mail mail'
-    '. mail mail';
+    '. message message message'
+    '. message message message'
+    '. mail mail mail'
+    '. mail mail mail';
      
 
 }
@@ -346,14 +355,14 @@ nav li a:hover{
   }
   
   header{
-    background-color: #f9f9ef;
+   background-color: #f9f9ef;
     opacity: .7;
   }
   .secOne{
-    grid-column: 2/4;
-  }
+    grid-column: 2/5;
+    }
   .secTwo{
-    grid-column: 2/4;
+    grid-column: 2/5;
   }
 }
 
