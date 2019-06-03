@@ -1,80 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>contact</title>
-	
-	<link charset="utf-8" rel="stylesheet" type="text/css" href="smoke-pure.css" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>contact</title>
+    
+    <link charset="utf-8" rel="stylesheet" type="text/css" href="smoke-pure.css" />
     <script type="text/javascript" src="smoke-pure.js"></script>
-
-  
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript">
-		function validateEmail(){
-		var email = document.getElementById('mail').value; 
-		var re = /\S+@\S+\.\S+/;
-        if( re.test(email)){
-        document.getElementById('msg').innerHTML = "ok";
-        }else{
-        document.getElementById('msg').innerHTML = "put valid e-mail";
-         }
-
-        }
-        
-		function formCheck(){
-			var a = document.getElementById('text').value;
-			var b = document.getElementById('mail').value;
-			if( a == "" || b == ""){
-				
-            smoke.alert("please fill in all fields ");
-				return false;
-			}
-		}
-	</script>
-</head>
-<body>
-	
-	<header>
-	<nav class="stage" >
-	
-    <div id="nav">
-    	<ul  >
-	       <li class="liM"><a href="my web.html" title="main" ">MAIN
-	        </a>
-	        </li>
-	        <li class="liA"><a href="about.html" title="about" > ABOUT
-	        </a>
-            </li>
-            
-            <li class="liC"><a href="contact.html" title="contact" >CONTACT
-	       	 </a>
-    	     </li>
-             <li class="liG"><a href="gallery.html" title="gallery" >GALLERY
-	         </a>
-             </li>	
-    </ul>
-    </div>
-    </nav>
+    
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <script type="text/javascript">
+    function validateEmail(){
+    var email = document.getElementById('mail').value;
+    var re = /\S+@\S+\.\S+/;
+    if( re.test(email)){
+    document.getElementById('msg').innerHTML = "ok";
+    }else{
+    document.getElementById('msg').innerHTML = "put valid e-mail";
+    }
+    }
+    function formCheck(){
+    var a = document.getElementById('text').value;
+    var b = document.getElementById('mail').value;
+    if( a == "" || b == ""){
+    
+    smoke.alert("please fill in all fields ");
+    return false;
+    }
+    }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="stage">
+        <div id="nav">
+          <ul>
+            <li class="liM"><a href="my web.html" title="main">MAIN</a></li>
+            <li class="liA"><a href="about.html" title="about" > ABOUT</a></li>
+            <li class="liC"><a href="contact.html" title="contact" >CONTACT</a></li>
+            <li class="liG"><a href="gallery.html" title="gallery" >GALLERY</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-        
-        <div class="container">
-        <aside>
+
+    <div class="wrapper">
+      
+      <aside class="flex-container">
+       
+        <div class="box three">
         <form action="https://formspree.io/e-ve-j@hotmail.com" method="POST">
-        <section class="secOne">
-         MESSAGE ME:<br><br>
-        <textarea id = "text"  class="textarea" name="comment"></textarea><br><br>
-        </section>
-        <section class="secTwo">
-        YOUR E-MAIL<br><br>
-        <input onblur = " validateEmail() " id = "mail" type="email" name="email">
-        <span id="msg"></span><br><br>
-        <button class="btn" onclick = "return formCheck()" type="submit"value="Send">Send</button>
-        </section>
+          <section class="secOne">
+            MESSAGE ME:<br><br>
+            <textarea id = "text"  class="textarea" name="comment"></textarea><br><br>
+          </section>
+          <section class="secTwo">
+            YOUR E-MAIL<br><br>
+            <input onblur = " validateEmail() " id = "mail" type="email" name="email">
+            <span id="msg"></span><br><br>
+            <button class="btn" onclick = "return formCheck()" type="submit"value="Send">Send</button>
+          </section>
         </form>
-		</aside>
-		
-	</div>
-   
-</body>
+       </div>
+      </aside>
+      
+    </div>
+  </body>
 </html>

@@ -93,17 +93,46 @@ nav li a {
     }
 
 .info {
-  float:right;
-  margin-right: 150px;
-  margin-top: 70px;
-  width: 350px;
-  height: 300px;
-  font-size: 1em;
+ 
+  display: grid;
+  padding: 80px 0;
+  font-style: italic;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  text-transform: uppercase;
+  background-color: black;
+  opacity: .3;
+  letter-spacing: 7px;
+  font-size: 1.1em;
   letter-spacing: 4px;
-  font-family: arial, monospace,times;
+  align-content: center;
+  font-family: arial;
   font-weight: lighter;
-      
-  }
+  justify-items: flex-end;
+  grid-template-areas: 
+  '. . . . p .'
+  '. . . . em .';
+ }
+
+
+.p{
+      grid-area: p;
+      max-width: 250px;
+      min-height: 100px;
+      align-content: flex-end;
+      color: white ;
+      text-shadow: 1px 1px #732372, 1px -1px #732372, -1px 1px #732372, -1px -1px #732372, 3px 3px 6px rgba(0,0,0,.5);
+      display: grid;
+      padding: 5px;
+    }
+.em{
+      grid-area: em;
+      display: grid;
+      max-width: 250px;
+      min-height: 50px;
+      color: white ;
+      align-content: flex-start;
+    }
  
  .gallery{
     margin-left: 250px;
@@ -190,7 +219,6 @@ nav li a {
 
   @media only screen and (min-width:1024px) and (max-width:1600px){
   .container{
-  
   padding-left: 10px;
   margin: 0px;
   justify-items: end;
@@ -238,7 +266,23 @@ nav li a {
 
   }
   
+  
+  
 }
+@media only screen and (max-width: 1143px){
+  .info{
+  align-items: center;
+  padding-top: 190px;
+  justify-items: center;  
+  grid-template-areas: 
+
+  '. . . . . p'
+  '. . . . . em';
+  }
+  .p{
+    max-width: 180px;
+  }
+ }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
   .container{
   align-self: flex-end;
@@ -304,7 +348,22 @@ nav li a {
     
    }
    
+  
+   
  }
+  @media only screen and (max-width: 904px) {
+    .info{
+      padding-top: 300px;
+      
+    }
+    .p .em{
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+      max-width: 200px;
+    }
+  }
+ 
  @media only screen and (min-width: 250px) and (max-width: 767px){
   .container{
   font-size: .8em;
@@ -370,10 +429,10 @@ nav li a {
   body{
 
   background-color:  #7B4B5C; 
-  background: url(22.jpg) fixed repeat;
+  background: url(22.jpg) fixed no-repeat;
   background-size: cover; 
   background-position: center center;
-  overflow: auto;
+  overflow: hidden;
 
   }
 }
